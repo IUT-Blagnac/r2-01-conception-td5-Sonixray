@@ -1,0 +1,24 @@
+@startuml Use Case
+
+usecase a as "Affecter un Artisan à un chantier"
+usecase a1 as "Changer la date de fin d'un chantier"
+usecase b as "Obtenir le salaire d'un ouvrier"
+usecase b1 as "Obtenir les informations sur un ouvrier ou un chantier"
+usecase c as "Obtenir les chantiers en cours" 
+
+actor Responsable
+actor Entreprise
+actor Salarie
+
+'Pour aligner les 2 acteurs :
+a -[hidden]-> b
+b -[hidden]-> c
+
+Responsable -> a1
+Responsable -> a
+Entreprise -> b1
+Entreprise -> b
+Salarie -> c
+
+
+@enduml

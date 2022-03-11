@@ -1,0 +1,26 @@
+@startuml Entreprise
+
+class Chantier {
+    dateDebut:date
+    dateFin:date
+    adresse:String
+    void modifierDateFin()
+}
+
+class Artisan {
+    salaire:float
+    coordonnees:String
+    void affecterAChantier()
+}
+
+class Affecter {
+    nbHeure:float
+    dateDebut:date
+    dateFin:date
+    int getPayeArtisan()
+}
+
+Artisan "1..*" - "1..*" Chantier
+(Artisan,Chantier) .. Affecter
+
+@enduml
